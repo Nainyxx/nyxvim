@@ -34,10 +34,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install({
-        "go", "gomod", "gosum", "python", "rust", "c", "cpp",
-        "lua", "vim", "vimdoc", "bash", "json", "toml", "yaml", "markdown", "markdown_inline",
-      })
+      require("nvim-treesitter").install(require("config.parsers"))
       vim.api.nvim_create_autocmd("FileType", {
         callback = function(args)
           pcall(vim.treesitter.start, args.buf)

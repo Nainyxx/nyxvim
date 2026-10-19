@@ -20,6 +20,7 @@ return {
       { "<leader>as", "<cmd>ClaudeCodeTreeAdd<cr>", desc = "Добавить файл", ft = "neo-tree" },
       { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Принять правку" },
       { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Отклонить правку" },
+      { "<leader>ah", function() require("config.claude_changes").clear() end, desc = "Убрать подсветку правок" },
     },
   },
 }

@@ -1,5 +1,7 @@
 local group = vim.api.nvim_create_augroup("user", { clear = true })
 
+require("config.claude_changes").setup()
+
 -- Autosave: no :w needed.
 vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged", "BufLeave", "FocusLost" }, {
   group = group,
