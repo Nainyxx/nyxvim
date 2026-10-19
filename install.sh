@@ -68,7 +68,7 @@ fi
 
 # --- pre-install everything --------------------------------------------------
 info "Installing plugins"
-timeout 600 nvim --headless "+Lazy! sync" +qa || warn "Plugin install did not finish, it will continue on first start"
+timeout 600 nvim --headless "+Lazy! restore" +qa || warn "Plugin install did not finish, it will continue on first start"
 
 info "Installing language servers and formatters"
 timeout 900 nvim --headless \
