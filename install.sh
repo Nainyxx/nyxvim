@@ -10,7 +10,7 @@ CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 DATA="${XDG_DATA_HOME:-$HOME/.local/share}/nvim"
 STATE="${XDG_STATE_HOME:-$HOME/.local/state}/nvim"
 CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/nvim"
-OMARCHY_THEME="$HOME/.local/state/omarchy/current/theme/neovim.lua"
+OMARCHY_THEME="${XDG_STATE_HOME:-$HOME/.local/state}/omarchy/current/theme/neovim.lua"
 
 info() { printf '\033[1;35m==>\033[0m %s\n' "$*"; }
 warn() { printf '\033[1;33m!!\033[0m  %s\n' "$*"; }
